@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: aqua;
+}
+/*Config para centralizar as 3 box*/
+div.selected-box, .board, .result {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Config Geral do box de seleção*/
+div.selected-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 100%;
+    display: ;
+}
+/*Cabeçalho do box de seleção[Jogo da velha]*/
+div.selected-box header {
+    font-size: 22px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+/*Titulo box de seleção[Com quem quer jogar?]*/
+div.selected-box .title {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 20px 0px;
+}
+/*Opções*/
+div.selected-box .options {
+    display: flex;
+    width: 100%;
+}
+/*Config gerais dos botões de escolher X ou O*/
+.options button {
+    background: turquoise;
+    color: white;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 0px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+/*Animação dos botões*/
+.options button:hover, .result .btn button:hover {
+    transform: scale(0.9);
+}
+/*Jogador X*/
+.options button player-X {
+    margin-right: 5px;
+}
+/*Jogador O*/
+.options button player-O {
+    margin-right: 5px;
+}
+/*Config das divs board e details*/
+.board .details{
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.board .details .player {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-around;
+}
+/*Personalização dos spans[Vez do X] e [Vez do O]*/
+.board .details span {
+    color: turquoise;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0px;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: default;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.details span:first-child {
+    color: white;
+}
+/**/
+.details .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: turquoise;
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 2;
+}
+/*Config do Tabuleiro*/
+.board .player-area {
+    margin-top: 20px;
+}
+
+.board section {
+    display: flex;
+}
+
+.board {
+    display: none;
+}
+
+.board section span {
+    display: block;
+    height: 80px;
+    width: 80px;
+    margin: 2px;
+    background: white;
+    border-radius: 5px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 80px;
+    color: turquoise;
+}
+/*Config do box Result*/
+.result {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 300px;
+    width: 100%;
+    display: none;
+}
+
+.result .won-txt {
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+}
+
+.result .won-txt p {
+    font-weight: 600;
+    margin: 0 3px;
+}
+
+.result .btn {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.result .btn button {
+    background: turquoise;
+    color: white;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 8px 0px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
